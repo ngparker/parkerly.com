@@ -1,0 +1,7 @@
+Redirect 302 /sb-tests/302-http-malware.html http://malware.testing.google.test/testing/malware/
+Redirect 302 /sb-tests/302-https-malware.html https://malware.testing.google.test/testing/malware/
+Redirect 302 /sb-tests/302-http-malware-including.html http://parkerly.com/sb-tests/malware.html
+Redirect 302 /sb-tests/302-https-malware-including.html https://parkerly.com/sb-tests/malware.html
+Redirect 302 /sb-tests/302-http-www-malware-including.html http://www.parkerly.com/sb-tests/malware.html
+Redirect 302 /sbt /sb-tests/testing_links.html
+Redirect 302 /sb-tests/302-http-pha.apk http://testsafebrowsing.appspot.com/apiv4/ANDROID/POTENTIALLY_HARMFUL_APPLICATION/URL_EXPRESSION/

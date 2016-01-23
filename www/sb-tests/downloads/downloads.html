@@ -1,0 +1,25 @@
+<ol>
+<li><a href="badfile.exe" download="somefile.exe">badfile.exe -> somefile.exe</a>
+<li><a href="badfile.exe" download="somefile.exe.">badfile.exe -> somefile.exe.</a>
+<li><a href="badfile.exe" download="somefile.exe ">badfile.exe -> somefile.exe
+[sp]</a>
+<li><a href="badfile.app" download="somefile.exe">badfile.app -> somefile.exe</a>
+<li><a href="badfile.app" download="somefile.app">badfile.app -> somefile.app</a>
+<li><a href="badfile.exe" download="somefile.zip">badfile.exe -> somefile.zip</a>
+<li><a href="badfile.txt" download="somefile.exe">badfile.txt -> somefile.exe</a>
+<li><a href="badfile.txt" download="somefile.txt">badfile.txt -> somefile.txt</a>
+not blocked
+<!--<li><a href="http://testsafebrowsing.appspot.com/s/malware.html"
+download="malware.exe">malware.html -> malware.exe,</a> blacklisted by URL -->
+<li><a href="unusual-file.exe" download="unusual-file.exe">unusual-file.exe</a>
+with a sha256 of
+e23e5bf3ba96a0cca4ffcfa23ee69dd0324f09dcd779f92f29dcc3f6fcdb08a5
+<li><a href="unsigned.exe" download="unsigned.exe">unsigned.exe</a> (uncommon)
+<li><a href="unsigned_exe_from_macos_zip30.zip"
+download="unsigned_exe_from_macos_zip30.zip">unsigned_exe_from_macos_zip30.zip</a>
+(may fail to unpack)
+<li><a href="http://testsafebrowsing.appspot.com/apiv4/ANDROID/POTENTIALLY_HARMFUL_APPLICATION/URL_EXPRESSION/" download="foo.apk">Mobile PHA blacklisted link -> foo.apk</a>
+<li><a href="/sb-tests/302-http-pha.apk" download="foo2.apk">.apk link to 302 to
+Mobile PHA-blacklisted link --> foo2.apk </a> </ul>
+<li><a href="downloads.html" download="foo3.apk">clean downloads.html -> foo3.apk</a>
+

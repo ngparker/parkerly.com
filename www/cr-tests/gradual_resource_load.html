@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Gradual Resource Load Test</h1>
+
+<script>
+var run = true;
+var writeLinks = function() {
+  if (!document.getElementById("run").checked) {
+    return;
+  }
+
+  var i = Math.random();
+  var img=document.createElement("img");
+  img.setAttribute('src', '/nonexistant/foo/' + i);
+  img.width = 2;
+  img.height = 2;
+  document.getElementById("textblock").appendChild(img);
+
+  var delay = document.getElementById("delay").value;
+  setTimeout(writeLinks, delay);
+}
+
+var start = function() {
+  if (document.getElementById("run").checked) {
+    document.getElementById("textblock").innerHTML = "";
+    writeLinks();
+  } 
+}
+
+</script>
+
+<p>Enter inter-image delay in milliseconds:</p>
+<input id="delay" type="number" value="30"></p>
+
+<p>Run:
+<input id="run" type="checkbox" onclick="start()">
+</p>
+
+<div id="textblock"></div>
+
+</body>
+</html> 
+

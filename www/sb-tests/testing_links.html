@@ -1,0 +1,61 @@
+<head>
+<style>
+body {
+  font-family: arial;
+  font-size: 22px;
+}
+
+h3 {
+padding-top: 26px;
+}
+
+</style>
+<title>Internal Safe Browsing test links</title>
+</head>
+
+<body>
+<h3> Mobile: </h3>
+<ul>
+  <li>Test link on <a href="http://testsafebrowsing.appspot.com/apiv4/ANDROID/POTENTIALLY_HARMFUL_APPLICATION/URL_EXPRESSION/"> android/PHA</a> blacklist
+  <li>Test link on <a href="http://testsafebrowsing.appspot.com/apiv4/ANDROID/SOCIAL_ENGINEERING_INTERNAL/URL_EXPRESSION/">android/social-engineering</a> blacklist
+</ul>
+
+<h3>Desktop: redirect patterns</h3>
+<ul>
+  <li><a href="http://malware.testing.google.test/testing/malware/">
+      http -> malware page</a>
+  <li><a href="https://malware.testing.google.test/testing/malware/">
+      https -> malware page</a>
+  <li><a href="http://parkerly.com/sb-tests/malware.html">
+      http -> page including malware resources via http</a>
+  <li><a href="https://parkerly.com/sb-tests/malware.html">
+      https -> page including malware resources via http</a>
+  <li><a href="http://parkerly.com/sb-tests/302-http-malware.html">
+      http 302 -> http malware page</a>
+  <li><a href="http://parkerly.com/sb-tests/302-https-malware.html">
+      http 302 -> https malware page</a>
+  <li><a href="https://parkerly.com/sb-tests/302-http-malware.html">
+      https 302 -> http malware page</a>
+  <li><a href="https://parkerly.com/sb-tests/302-https-malware.html">
+      https 302 -> https malware page</a>
+  <li><a href="https://www.parkerly.com/sb-tests/302-http-www-malware-including.html">
+      https 302 -> [chg domain] http page including malware resources via http</a>
+  <li><a href="http://parkerly.com/sb-tests/302-http-malware-including.html">
+      http 302 -> http -> page including malware resources</a>
+  <li><a href="https://parkerly.com/sb-tests/302-http-malware-including.html">
+      https 302 -> http -> page including malware resources</a>
+  <li><a href="http://parkerly.com/sb-tests/302-https-malware-including.html">
+      http 302 -> https -> page including malware resources</a>
+</ul>
+
+<h3>Subresource tests</h3>
+<ul>
+  <li><a href="bad-subresources.html">bad-subresources</a>
+</ul>
+
+<h3>Download tests</h3>
+<ul>
+  <li><a href="downloads/downloads.html">blacklisted binaries</a>
+</ul>
+
+</body>
