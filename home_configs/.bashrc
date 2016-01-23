@@ -1,5 +1,5 @@
 # .bashrc
-# Nathan Parker's .bashrc (nparker)
+# Nathan Parker's .bashrc
 
 # Source global definitions
 if [ -f /etc/bash.bashrc ]; then
