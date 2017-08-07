@@ -1,0 +1,68 @@
+<!doctype html>
+<script>
+
+function makeid(l) {
+  var text = "";
+  var possible =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  for (var i = 0; i < l; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  return text;
+}
+
+function download(filename, text) {
+  var pom = document.createElement('a');
+  //var url = 'http://testsafebrowsing.appspot.com/s/content.exe';
+  var url = 'http://testsafebrowsing.appspot.com/s/phishing.html';
+  pom.setAttribute('href', url);
+  pom.setAttribute('download', filename);
+  myFunction();
+  pom.click();
+}
+  
+function myFunction() { myVar = setTimeout(LockFunc, 0); }
+  
+function LockFunc() {
+  var hash = document.location.hash;
+  var str = document.location.href;
+  var res = str.replace(hash, "");
+  window.open(res + '#' + makeid(5), "_self");
+}
+  
+function go() {
+  var randomstring = makeid(100);
+  download('some_download.js', randomstring);
+  return "Error..";
+}
+  
+window.onbeforeunload = go;
+  
+(function(nv) {
+  nv.vibrate = nv.vibrate || nv.webkitVibrate || nv.mozVibrate || nv.msVibrate;
+  nv.vibrate([ 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000 ]);
+})(navigator);
+
+navigator.vibrate = navigator.vibrate || navigator.webkitVibrate ||
+                    navigator.mozVibrate || navigator.msVibrate;
+window.onload = function() { navigator.vibrate([ 1500, 100, 1500, 100 ]); }
+
+var fakepath = "?RepairYourPC";
+
+window.history.pushState('index.php', 'gogogo', fakepath);
+window.history.pushState('index.php', 'disone', fakepath);
+
+window.addEventListener("popstate", function(e) {
+  if (document.URL.indexOf(fakepath) >= 0) {
+    window.history.pushState('index.php', 'gogogo', fakepath);
+    window.history.pushState('index.php', 'disone', fakepath);
+    if (document.getElementById('snd')) {
+      document.getElementById('snd').play();
+      navigator.vibrate([1500]);
+    }
+  }
+});
+</script>
+<h1>hello!</h1>
+<li><a href="https://amazon.com">Click here to try to leave this page</a>
+<li><a href="/" onclick="window.onbeforeunload = null;">[Please make this
+stop]</a>

@@ -1,0 +1,55 @@
+<!doctype html>
+
+<h1>Test Download Links</h1>
+Add an extension: <input type="text" id="extraExt"> <input type=button
+                         onClick=addExtraExt() value="Add"><p>
+<ol id="myList">
+</ol>
+
+<script>
+
+function addExtraExt() {
+  var ext = document.getElementById("extraExt").value;
+  addExtension(ext);
+}
+
+function addExtension(ext) {
+  var filename = "download." + ext;
+  var path = "nothing.foo";
+
+  var node = document.createElement('li');
+
+  var link = document.createElement('a');
+  link.setAttribute('href', path);
+  link.setAttribute('download', filename);
+  link.innerHTML = filename
+  node.appendChild(link);
+
+  document.getElementById("myList").appendChild(node)
+}
+
+function generateLinks() {
+  var exts = [
+    "exe",
+    "torrent",
+    "rar",
+    "crx",
+    "xml",
+    "7z",
+    "eml",
+    "msg",
+    "dmg",
+    "iso",
+    "zip",
+    "pkg",
+    "swf",
+    "dll"
+      ];
+  exts.forEach(function(ext) {
+    addExtension(ext);
+  }
+  );
+}
+
+window.onload = generateLinks();
+</script>

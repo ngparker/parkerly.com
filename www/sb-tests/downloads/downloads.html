@@ -1,3 +1,4 @@
+<h2>Links of the form &lt;a href=.. download=...&gt;</h2>
 <ol>
 <li><a href="badfile.exe" download="somefile.exe">badfile.exe -> somefile.exe</a>
 <li><a href="badfile.exe" download="somefile.exe.">badfile.exe -> somefile.exe.</a>
@@ -9,8 +10,6 @@
 <li><a href="badfile.txt" download="somefile.exe">badfile.txt -> somefile.exe</a>
 <li><a href="badfile.txt" download="somefile.txt">badfile.txt -> somefile.txt</a>
 not blocked
-<!--<li><a href="http://testsafebrowsing.appspot.com/s/malware.html"
-download="malware.exe">malware.html -> malware.exe,</a> blacklisted by URL -->
 <li><a href="unusual-file.exe" download="unusual-file.exe">unusual-file.exe</a>
 with a sha256 of
 e23e5bf3ba96a0cca4ffcfa23ee69dd0324f09dcd779f92f29dcc3f6fcdb08a5
@@ -23,3 +22,11 @@ download="unsigned_exe_from_macos_zip30.zip">unsigned_exe_from_macos_zip30.zip</
 Mobile PHA-blacklisted link --> foo2.apk </a> </ul>
 <li><a href="downloads.html" download="foo3.apk">clean downloads.html -> foo3.apk</a>
 
+<li><a href="test.xml" download="test.xml">clean test.xml</a>
+<li><a href="test.bat" download="test.bat">clean test.bat</a>
+<li><a href="http://testsafebrowsing.appspot.com/s/malware.html" download="malware.exe">malware.html -> malware.exe,</a> blacklisted by URL
+<li>Safe <a href="foo.apk" download>foo.apk</a> download
+<li>Safe <a href="foo.spl" download>foo.spl</a> download [warns on all
+platforms]
+<li>Safe <a href="https://parkerly.com/cgi-bin/download-apk">file.apk</a> with a
+specific content-disposition

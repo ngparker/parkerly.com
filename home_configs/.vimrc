@@ -12,7 +12,7 @@ let g:syntastic_enable_balloons = 1
 let g:syntastic_enable_highlighting = 0
 
 " === My visual style ===
-set background=light
+set background=dark
 syntax on
 if has("gui_running")
   " Custom color file, from ~.vim/colors/
