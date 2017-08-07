@@ -1,0 +1,21 @@
+[user]
+  email = ngparker@users.noreply.github.com
+  name = Nathan Parker
+[credential]
+  helper = cache
+[alias]
+  lg = log --decorate --oneline origin..HEAD
+  lc = log --stat origin..HEAD
+  branch-point = merge-base HEAD @{u}
+  brdiff = ! git diff -M $(git branch-point)
+  brdifftool = ! git difftool -M $(git branch-point) --dir-diff
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  st = status
+  br = branch
+  co = checkout
+  dh = diff origin..HEAD
+  df = diff
+  dc = diff --cached
+  mb = map-branches -vv
+  who = shortlog -s --
+
