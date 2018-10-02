@@ -1,16 +1,19 @@
 <!doctype html>
 
 <h1>Test Download Links</h1>
-Add an extension: <input type="text" id="extraExt"> <input type=button
-                         onClick=addExtraExt() value="Add"><p>
+<form onSubmit="addExtraExt(); return false">
+Add an extension: <input type="text" id="extraExt">
+<input type=submit value="Add"><p>
+</form>
 <ol id="myList">
 </ol>
 
 <script>
 
 function addExtraExt() {
-  var ext = document.getElementById("extraExt").value;
-  addExtension(ext);
+  var ext = document.getElementById("extraExt");
+  addExtension(ext.value);
+  ext.value = "";
 }
 
 function addExtension(ext) {
@@ -25,11 +28,13 @@ function addExtension(ext) {
   link.innerHTML = filename
   node.appendChild(link);
 
-  document.getElementById("myList").appendChild(node)
+  document.getElementById("myList").appendChild(node);
+  return false;
 }
 
 function generateLinks() {
   var exts = [
+    "swf",
     "exe",
     "torrent",
     "rar",
@@ -42,7 +47,6 @@ function generateLinks() {
     "iso",
     "zip",
     "pkg",
-    "swf",
     "dll"
       ];
   exts.forEach(function(ext) {
@@ -50,6 +54,10 @@ function generateLinks() {
   }
   );
 }
+function onLoad() {
+  generateLinks();
+  document.getElementById("extraExt").focus();
+}
 
-window.onload = generateLinks();
+window.onload = onLoad()
 </script>
