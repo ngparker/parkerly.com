@@ -1,8 +1,8 @@
 [user]
   email = ngparker@users.noreply.github.com
-  name = Nathan Parker
+	name = Nathan Parker
 [credential]
-  helper = cache
+	helper = cache --timeout=3600
 [alias]
   lg = log --decorate --oneline origin..HEAD
   lc = log --stat origin..HEAD
