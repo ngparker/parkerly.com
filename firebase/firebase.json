@@ -7,29 +7,14 @@
       "**/node_modules/**"
     ],
 "redirects": [
-  {
-    "source": "/sb-tests/302-http-malware.html",
-    "destination": "http://malware.testing.google.test/testing/malware/",
-    "type": 302
-},
 {
     "source": "/sb-tests/302-https-malware.html",
     "destination": "https://malware.testing.google.test/testing/malware/",
     "type": 302
 },
 {
-    "source": "/sb-tests/302-http-malware-including.html",
-    "destination": "http://parkerly.com/sb-tests/malware.html",
-    "type": 302
-},
-{
     "source": "/sb-tests/302-https-malware-including.html",
     "destination": "https://parkerly.com/sb-tests/malware.html",
-    "type": 302
-},
-{
-    "source": "/sb-tests/302-http-www-malware-including.html",
-    "destination": "http://www.parkerly.com/sb-tests/malware.html",
     "type": 302
 },
 {

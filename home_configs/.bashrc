@@ -77,7 +77,6 @@ export PAGER=less
 
 # I like color
 export GREP_COLOR=1
-export GREP_OPTIONS="--directories=skip --color=auto"
 
 alias delete='/bin/rm'         # I really mean it
 
