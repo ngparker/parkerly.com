@@ -122,3 +122,7 @@ GIT_PS1_SHOWDIRTYSTATE=1
 #GIT_PS1_SHOWCOLORHINTS=1
 PS1="${debian_chroot:+($debian_chroot)}\e[0;1m\h[\!]:\$PWD\e[0m\e[1;33m\n\$ \$(setcolortrap)"
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
